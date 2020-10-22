@@ -13,7 +13,7 @@ const PROPERTIES_DATA =
                 propertyType: PropertiesTypes.TERRACED,
                 'satelliteImage': 'https://www.google.com/maps?t=k&q=loc:53.248862,-6.12526',
                 baths: 1,
-                beds: 1
+                beds: 3
             },
             {
                 id: 2,
@@ -24,7 +24,7 @@ const PROPERTIES_DATA =
                 'price': 350000,
                 propertyType: PropertiesTypes.DETACHED,
                 'satelliteImage': 'https://www.google.com/maps?t=k&q=loc:53.24795699999999,-6.1263510000000005',
-                baths: 1,
+                baths: 4,
                 beds: 2
             },
             {

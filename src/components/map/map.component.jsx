@@ -3,8 +3,8 @@ import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 import Modal from './property-modal.component';
 
 const mapStyles = {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
 };
 
 export const PropertiesMap = ({

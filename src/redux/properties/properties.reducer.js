@@ -30,13 +30,17 @@ const propertiesReducer = (state = INITIAL_STATE, action) => {
             };
         case PropertiesActionTypes.FILTER_PROPERTIES:
             const {filterType, filterValue} = action.payload;
+            const updatedFilters = Object.entries(state.currentFilters).map((filter) =>
+                filter[0] === filterType ? [filter[0], filterValue] : [filter[0], filter[1]]);я
+            const newFilters = {};
+            updatedFilters.forEach(filter => {
+               newFilters[filter[0]] = filter[1];
+            });
+
             return {
                 ...state,
-                currentFilters: {
-                    ...state.currentFilters,
-                    filterType: filterValue
-                },
-                filteredCollections: filterProperties(state.collections, action.payload)
+                currentFilters: newFilters,
+                filteredCollections: filterProperties(state.filteredCollections, action.payload)
             };
         default:
             return state;
