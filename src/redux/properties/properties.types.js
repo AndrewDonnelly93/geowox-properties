@@ -1,0 +1,4 @@
+export const PropertiesActionTypes = {
+    TOGGLE_PROPERTY_MODAL: 'TOGGLE_PROPERTY_MODAL',
+    SET_CURRENT_PROPERTY: 'SET_CURRENT_PROPERTY'
+};
