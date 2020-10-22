@@ -1,13 +1,14 @@
 import React from 'react';
 import MapContainer from '../map/map.container';
-
-import './collections-overview.styles.scss';
+import Filters from '../filters/filters.component';
+import {CollectionsOverviewStyled} from './collections-overview.styles';
 
 const CollectionsOverview = () => {
     return (
-        <div className='collections-overview'>
+        <CollectionsOverviewStyled>
+            <Filters/>
             <MapContainer/>
-        </div>
+        </CollectionsOverviewStyled>
     )
 };
 

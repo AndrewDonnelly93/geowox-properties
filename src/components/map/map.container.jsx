@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
-import {selectCurrentProperty, selectCollections, selectModalHidden} from '../../redux/properties/properties.selectors';
+import {selectCurrentProperty, selectFilteredCollections, selectModalHidden} from '../../redux/properties/properties.selectors';
 import {setCurrentProperty, togglePropertyModal} from '../../redux/properties/properties.actions';
 import PropertiesMap from './map.component';
 
@@ -26,7 +26,7 @@ export const MapContainer = ({
 };
 
 export const mapStateToProps = createStructuredSelector({
-    collections: selectCollections,
+    collections: selectFilteredCollections,
     currentProperty: selectCurrentProperty,
     modalHidden: selectModalHidden
 });

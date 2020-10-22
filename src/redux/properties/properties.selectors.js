@@ -2,14 +2,9 @@ import { createSelector } from 'reselect';
 
 const selectProperties = state => state.properties;
 
-export const selectCollections = createSelector(
+export const selectFilteredCollections = createSelector(
     [selectProperties],
-    properties => properties.collections
-);
-
-export const selectCollectionsForPreview = createSelector(
-    [selectCollections],
-    collections => Object.keys(collections).map(key => collections[key])
+    properties => properties.filteredCollections
 );
 
 export const selectCurrentProperty = createSelector(
@@ -21,3 +16,10 @@ export const selectModalHidden = createSelector(
     [selectProperties],
     properties => properties.modalHidden
 );
+
+export const selectCurrentFilters = createSelector(
+    [selectProperties],
+    properties => properties.currentFilters
+);
+
+console.log('currentFilters ', selectCurrentFilters);
