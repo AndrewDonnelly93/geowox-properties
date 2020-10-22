@@ -4,8 +4,8 @@ import {setCurrentProperty, filterProperties} from './properties.utils';
 
 const defaultFilters = {
     PROPERTY_TYPE: PropertiesTypes.DETACHED,
-    BEDROOMS: 1,
-    BATHROOMS: 1
+    BEDROOMS: null,
+    BATHROOMS: null
 };
 
 const INITIAL_STATE = {
@@ -31,7 +31,7 @@ const propertiesReducer = (state = INITIAL_STATE, action) => {
         case PropertiesActionTypes.FILTER_PROPERTIES:
             const {filterType, filterValue} = action.payload;
             const updatedFilters = Object.entries(state.currentFilters).map((filter) =>
-                filter[0] === filterType ? [filter[0], filterValue] : [filter[0], filter[1]]);я
+                filter[0] === filterType ? [filter[0], filterValue] : [filter[0], filter[1]]);
             const newFilters = {};
             updatedFilters.forEach(filter => {
                newFilters[filter[0]] = filter[1];
